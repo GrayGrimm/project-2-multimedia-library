@@ -10,6 +10,7 @@ const session = require('express-session');
 
 
 const authController = require("./controllers/auth.js");
+const librariesController = require("./controllers/libraries.js");
 
 const isSignedIn = require("./middleware/is-signed-in.js");
 const passUserToView = require("./middleware/pass-user-to-view.js");
@@ -38,13 +39,16 @@ app.use(
 app.use(passUserToView);
 
 app.get("/", async (req, res) => {
-  res.render("index.ejs", {
-    user: req.session.user
-  });
+  if(req.session.user) {
+    res.redirect(`/users/${req.session.user._id}/libraries`);
+  } else {
+    res.render('index.ejs');
+  };
 });
 
 app.use("/auth", authController);
 app.use(isSignedIn);
+app.use("/users/:userId/libraries", librariesController);
 
 app.listen(port, () => {
   console.log(`The express app is ready on port ${port}!`);
