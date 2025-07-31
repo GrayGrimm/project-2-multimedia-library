@@ -54,8 +54,24 @@ router.get('/movies', async (req, res) => {
   };
 });
 
-/* ==========================Update========================== */
+router.get("/:movieId", async (req, res) => {
+  try {
+    const currentUser = await User.findById(req.session.user._id);
+    const currentMovie = currentUser.movieLibrary.id(req.params.movieId);
+    res.render("libraries/show.ejs", {
+      currentMovie: currentMovie,
+      movieLibrary: currentUser.movieLibrary
+    });
+  } catch(error) {
+    console.log(error);
+    res.redirect("/");
+  };
+});
 
+/* ==========================Update========================== */
+router.get("/:movieId/edit", (req, res) => {
+  res.send("This is the edit page");
+});
 
 
 /* ==========================Delete========================== */

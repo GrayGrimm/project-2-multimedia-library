@@ -12,8 +12,9 @@
 <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1>Your Libraries</h1>
-    <a href="/users/<%=user._id%>/libraries/new">Add to Library</a>
-    <a href="/users/<%=user._id%>/libraries/movies">Your Movies</a>
+   <div><p>I would like to view my:</p><a href="/users/<%=user._id%>/libraries/movies">Movies</a></div>
+   <div><p>Would you like to <a href="/users/<%=user._id%>/libraries/new">add to your Library?</a></p></div>
+    
 </body>
 
 </html>

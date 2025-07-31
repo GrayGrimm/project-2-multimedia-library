@@ -14,9 +14,14 @@
 
         <ul>
             <% movieLibrary.forEach(movie => { %>
-                <li><%= movie.name %></li>
+                <li>
+                    <a href="/users/<%= user._id%>/libraries/<%= movie._id %>">
+                    <%= movie.name %>
+                    </a>
+                </li>
            <% }) %>
         </ul>
 </body>
 
 </html>
+
