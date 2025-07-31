@@ -10,8 +10,10 @@
 </head>
 
 <body>
-    <a href="/views/libraries/new">Add to Library</a>
-    <a href="/views/libraries/movies">Movies library</a>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Your Libraries</h1>
+    <a href="/users/<%=user._id%>/libraries/new">Add to Library</a>
+    <a href="/users/<%=user._id%>/libraries/movies">Your Movies</a>
 </body>
 
 </html>

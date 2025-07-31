@@ -16,8 +16,7 @@ const movieSchema = new mongoose.Schema({
         required: true,
     },
     status: {
-        type: String,
-        enum: ['watched','read','played','listened', 'not yet'],
+        type: Boolean,
         required: true,
     },
     description: {
@@ -25,7 +24,8 @@ const movieSchema = new mongoose.Schema({
         required: true,
     },
     borrowable: {
-        type: Boolean,
+        type: String,
+        enum: ['yes', 'no'],
         required: true,
     },
     director: {
@@ -51,6 +51,7 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    movieLibrary: [movieSchema]
 });
 
 const User = mongoose.model("User", userSchema);
