@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editing <%= currentMovie.name %></title>
+</head>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Currently Editing: <%= currentMovie.name %></h1>
+    <p>Please start editing:</p>
+
+    <form action="/users/<%= user._id %>/libraries/movieLibrary/<%= currentMovie._id %>?_method=PUT" method="POST">
+
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" value="<%= currentMovie.name %>" />
+
+            <label for="rating">Rating:</label>
+            <select name="rating" id="rating">
+                <option value="G">G</option>
+                <option value="PG">PG</option>
+                <option value="PG-13">PG-13</option>
+                <option value="R">R</option>
+                <option value="NC-17">NC-17</option>
+                <option value="NR">NR</option>
+            </select>
+
+            <label for="genre">Genre:</label>
+            <input type="text" name="genre" id="genre" value="<%= currentMovie.genre %>" />
+
+            <label for="status">Have Watched:</label>
+            <input type="checkbox" name="status" id="status" <% if (currentMovie.status) { %>checked<% } %>/>
+
+            <label for="description">Breif Description:</label>
+            <textarea name="description" id="description" ><%= currentMovie.description %></textarea>
+
+            <label for="borrowable">Can it be borrowed?</label>
+            <select name="borrowable" id="borrowable">
+                <option value="yes"
+                <%= currentMovie.borrowable === 'yes' ? 'selected' : '' %>
+                >Yes</option>
+                <option value="no">No</option>
+                <%= currentMovie.borrowable === 'no' ? 'selected' : '' %>
+            </select>
+
+            <label for="director">Director:</label>
+            <input type="text" name="director" id="director" value="<%= currentMovie.director %>" />
+
+            <label for="release_year">Release Year:</label>
+            <input type="number" name="release_year" id="release_year" value="<%= currentMovie.release_year%>"/>
+
+            <label for="runtime_minutes">Runtime Minutes:</label>
+            <input type="number" name="runtime_minutes" id="runtime_minutes" value="<%= currentMovie.runtime_minutes %>" />
+
+            <label for="cast">Cast:</label>
+            <textarea name="cast" id="cast"><%= currentMovie.cast %></textarea>
+
+            <button type="submit">Add to Library</button>
+        </form>
+
+</body>
+</html>

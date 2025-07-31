@@ -69,8 +69,17 @@ router.get("/:movieId", async (req, res) => {
 });
 
 /* ==========================Update========================== */
-router.get("/:movieId/edit", (req, res) => {
-  res.send("This is the edit page");
+router.get("/:movieId/edit", async (req, res) => {
+  try {
+    const currentUser = await User.findById(req.session.user._id);
+    const currentMovie = currentUser.movieLibrary.id(req.params.movieId);
+    res.render("libraries/edit.ejs", {
+      currentMovie: currentMovie
+    });
+  } catch(error) {
+    console.log(error);
+    res.redirect("/");
+  };
 });
 
 
