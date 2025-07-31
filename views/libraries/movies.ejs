@@ -13,7 +13,9 @@
         <h2>Welcome to your movies library!</h2>
 
         <ul>
-            <%  %>
+            <% movieLibrary.forEach(movie => { %>
+                <li><%= movie.name %></li>
+           <% }) %>
         </ul>
 </body>
 

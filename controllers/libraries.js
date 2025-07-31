@@ -44,7 +44,10 @@ router.get('/', async (req, res) => {
 
 router.get('/movies', async (req, res) => {
   try {
-    res.render('libraries/movies.ejs')
+    const currentUser = await User.findById(req.session.user._id);
+    res.render('libraries/movies.ejs', {
+      movieLibrary: currentUser.movieLibrary,
+    });
   } catch(error) {
     console.log(error);
     res.redirect("/");
