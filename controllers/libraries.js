@@ -104,7 +104,17 @@ router.put("/:movieId", async (req, res) => {
 
 /* ==========================Delete========================== */
 
-
+router.delete("/:movieId", async (req, res) => {
+  try {
+    const currentUser = await User.findById(req.session.user._id);
+    currentUser.movieLibrary.id(req.params.movieId).deleteOne();
+    await currentUser.save();
+    res.redirect(`/users/${currentUser._id}/libraries/movies`)
+  } catch (error) {
+    console.log(error);
+    res.redirect("/");
+  };
+});
 
 /* ==========================Export========================== */
 
