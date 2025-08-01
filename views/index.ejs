@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="/stylesheets/global.css">
   <title>Home Page</title>
 </head>
 
@@ -19,10 +19,10 @@
     </p>
     <% } else { %>
       <h1>Welcome to the app, quest</h1>
-      <p>
-        <a href="/auth/sign-up">Sign up</a> or
-        <a href="/auth/sign-in">Sign in</a>
-      </p>
+      <div class="links">
+        <a id="sign-up-button" href="/auth/sign-up">Sign up</a> or
+        <a id="sign-in-button" href="/auth/sign-in">Sign in</a>
+      </div>
       <% } %>
 
      

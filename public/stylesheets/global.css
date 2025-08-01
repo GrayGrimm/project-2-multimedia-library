@@ -1,0 +1,32 @@
+body {
+    display: grid;
+    background-color: lightslategrey;
+    
+}
+
+nav {
+    display: flex;
+    gap: 5px;
+    align-items: right;
+    text-align: right;
+}
+
+h1 {
+    display: flex;
+    color: rgb(243, 70, 18);
+    justify-content: center;
+    align-items: center;
+
+};
+
+.links {
+    /* display: flex; */
+    color: red;
+    /* justify-content: right; */
+    /* align-items: right; */
+}
+
+#sign-up-button, 
+#sign-in-button {
+    font-size: 30px;
+}
