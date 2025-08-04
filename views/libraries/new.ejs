@@ -14,10 +14,10 @@
 <p> You can only add to your Movies Library until update 1.1! Thank you for understanding!</p>
         <form action="/users/<%= user._id %>/libraries/movieLibrary" method="POST">
 
-            <label for="name">Name:</label>
+            <label for="name">Name:<span class="required">*</span></label>
             <input type="text" name="name" id="name" />
 
-            <label for="rating">Rating:</label>
+            <label for="rating">Rating:<span class="required">*</span></label>
             <select name="rating" id="rating">
                 <option value="G">G</option>
                 <option value="PG">PG</option>
@@ -27,16 +27,17 @@
                 <option value="NR">NR</option>
             </select>
 
-            <label for="genre">Genre:</label>
+            <label for="genre">Genre:<span class="required">*</span></label>
             <input type="text" name="genre" id="genre" />
 
-            <label for="status">Have Watched:</label>
+            <label for="status">Have Watched:<span class="required">*</span></label>
+            <input type="hidden" name="status" value="false" />
             <input type="checkbox" name="status" id="status" />
 
-            <label for="description">Breif Description:</label>
+            <label for="description">Breif Description:<span class="required">*</span></label>
             <textarea name="description" id="description"></textarea>
 
-            <label for="borrowable">Can it be borrowed?</label>
+            <label for="borrowable">Can it be borrowed?<span class="required">*</span></label>
             <select name="borrowable" id="borrowable">
                 <option value="yes">Yes</option>
                 <option value="no">No</option>

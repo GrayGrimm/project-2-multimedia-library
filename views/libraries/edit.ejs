@@ -17,10 +17,10 @@
 
         <form action="/users/<%= user._id %>/libraries/<%= currentMovie._id %>?_method=PUT" method="POST">
 
-            <label for="name">Name:</label>
+            <label for="name">Name:<span class="required">*</span></label>
             <input type="text" name="name" id="name" value="<%= currentMovie.name %>" />
 
-            <label for="rating">Rating:</label>
+            <label for="rating">Rating:<span class="required">*</span></label>
             <select name="rating" id="rating">
                 <option value="G" <%=currentMovie.rating==='G' ? 'selected' : '' %>
                     >G</option>
@@ -36,16 +36,16 @@
                     >NR</option>
             </select>
 
-            <label for="genre">Genre:</label>
+            <label for="genre">Genre:<span class="required">*</span></label>
             <input type="text" name="genre" id="genre" value="<%= currentMovie.genre %>" />
 
-            <label for="status">Have Watched:</label>
+            <label for="status">Have Watched:<span class="required">*</span></label>
             <input type="checkbox" name="status" id="status" <% if (currentMovie.status) { %>checked<% } %>/>
 
-                <label for="description">Breif Description:</label>
+                <label for="description">Breif Description:<span class="required">*</span></label>
                 <textarea name="description" id="description"><%= currentMovie.description %></textarea>
 
-                <label for="borrowable">Can it be borrowed?</label>
+                <label for="borrowable">Can it be borrowed?<span class="required">*</span></label>
                 <select name="borrowable" id="borrowable">
                     <option value="yes" <%=currentMovie.borrowable==='yes' ? 'selected' : '' %>
                         >Yes</option>
@@ -66,7 +66,7 @@
                 <label for="cast">Cast:</label>
                 <textarea name="cast" id="cast"><%= currentMovie.cast %></textarea>
 
-                <button type="submit">Edit <%= currentMovie.name %></button>
+                <button type="submit" id="currentSelectionEdit">Edit <%= currentMovie.name %></button>
         </form>
 
 </body>

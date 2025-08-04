@@ -24,7 +24,16 @@ https://moviesanywhere.com/
 
 Technologies Used:
 
-Javascript, HTML, CSS, EJS, Heroku, VS Code,
+Javascript, HTML, CSS, EJS, Heroku, VS Code, MongoDB
 
 Next Steps:
+
+Add the other library functionalities
+Add library drop down to the right of nav bar
+Add functionality so when all required areas are filled out the add to library button turns green
+Add the community view functionality
+Add the borrow functionality
+Add filter/ search functionality
+
+
 

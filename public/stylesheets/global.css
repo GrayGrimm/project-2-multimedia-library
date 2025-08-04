@@ -60,7 +60,8 @@ h1 {
     font-weight: bold;
 }
 
-#addToLibraryButton {
+#addToLibraryButton,
+#currentSelectionEdit {
     margin: 20px;
     border-radius: 5px;
     position: relative;
@@ -68,9 +69,13 @@ h1 {
     
 }
 
-#addToLibraryButton:hover {
+#addToLibraryButton:hover,
+#currentSelectionEdit:hover {
     background-color: green;
 }
+
+
+
 
 #deleteButton {
     border-radius: 5px;
@@ -145,4 +150,8 @@ h1 {
 
 input {
     border-radius: 5px;
+}
+
+.required {
+    color: red;
 }
