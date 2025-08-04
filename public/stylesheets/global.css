@@ -1,6 +1,6 @@
 body {
     display: grid;
-    background-color: lightslategrey;
+    background-color: #778899;
     justify-items: center;
 }
 
@@ -12,7 +12,7 @@ nav {
     justify-content: left;
     text-align: left;
     width: 100%;
-    color: black;
+    color: #000000;
     font-weight: bold;
 }
 
@@ -21,9 +21,13 @@ nav {
     text-decoration: none;
 }
 
-.appTitle {
-    background-color: #007bff;
+.navBar:hover {
     color: white;
+}
+
+.appTitle {
+    background-color: slategray;
+    color: black;
     padding: 1px;
     border-radius: 5px;
 }
@@ -41,7 +45,7 @@ h1 {
     display: inline-block;
     font-size: 20px;
     padding: 2px;
-    background-color:darkslategrey;
+    background-color:#2f4f4f;
     color: white;
     text-align: center;
     text-decoration: none;
@@ -49,6 +53,18 @@ h1 {
     cursor: pointer;
     border: none;
     font-weight: bold;
+}
+
+#addToLibraryButton {
+    margin: 20px;
+    border-radius: 5px;
+    position: relative;
+    top: -12px;
+    
+}
+
+#addToLibraryButton:hover {
+    background-color: green;
 }
 
 #deleteButton {

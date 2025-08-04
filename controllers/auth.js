@@ -38,17 +38,17 @@ const successPageHtml = `
                     align-items: center;
                     min-height: 100vh;
                     margin: 0;
-                    background-color: #f0f0f0;
+                    background-color: #2f4f4f;
                     text-align: center;
                 }
                 .container {
-                    background-color: #ffffff;
+                    background-color: #778899;
                     padding: 30px;
                     border-radius: 8px;
                     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                 }
                 h1 {
-                    color: #28a745;
+                    color: #000000;
                 }
                 p {
                     color: #333;
