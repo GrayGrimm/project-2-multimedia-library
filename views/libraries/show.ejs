@@ -27,9 +27,9 @@
                     <% } %>
                         <% } %>
         </ul>
-        <a href="/users/<%= user._id%>/libraries/<%=currentMovie._id%>/edit">Edit</a>
+        <a href="/users/<%= user._id%>/libraries/<%=currentMovie._id%>/edit" class="editLink">Edit</a>
         <form action="/users/<%= user._id %>/libraries/<%= currentMovie._id %>?_method=DELETE" method="POST">
-            <button type="submit">Delete <%= currentMovie.name %></button>
+            <button type="submit" id="deleteButton">Delete <%= currentMovie.name %></button>
         </form>
 </body>
 

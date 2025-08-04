@@ -1,9 +1,12 @@
 <nav>
     <% if(user) {%>
-        <a href="/users/<%=user._id%>/libraries">Your Libraries</a>
-        <a href="/users/<%=user._id%>/libraries/new">Add to Library</a>
-        <a href="/auth/sign-out">Sign Out</a>
+        <a href="/users/<%=user._id%>/libraries" class="navBar appTitle">MediaPlex</a>
+        <a href="/users/<%=user._id%>/libraries" class="navBar">Your Libraries</a>
+        <a href="/users/<%=user._id%>/libraries/new" class="navBar">Add to Library</a>
+        <a href="/auth/sign-out" class="navBar">Sign Out</a>
         <% } else { %>
-        <a href="/auth/sign-in">Sign In</a>
-        <% } %>
+            <a href="/" class="navBar appTitle">MediaPlex</a>
+            <a href="/auth/sign-in" class="navBar">Sign In</a>
+            <a href="/auth/sign-up" class="navBar">Sign Up</a>
+            <% } %>
 </nav>

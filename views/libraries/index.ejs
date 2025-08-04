@@ -12,12 +12,34 @@
 
 <body>
     <%- include('../partials/_navbar.ejs') %>
-        <h1>Your Libraries</h1>
-        <div>
-            <p>I would like to view my:</p><a href="/users/<%=user._id%>/libraries/movies">Movies</a>
+        <h1>Welcome To Your Personal MediaPlex!</h1>
+        <div >
+            <p id="librarySelectionPara">I would like to view my:</p>
+            <ul class="horizontal-list">
+                <li>
+                    <a href="/users/<%=user._id%>/libraries/movies" class="libraryLink">Movies</a>
+                </li>
+
+                <li>
+                    <a href="/users/<%=user._id%>/libraries/tv-shows" class="libraryLink">TV Shows</a>
+                </li>
+
+                <li>
+                    <a href="/users/<%=user._id%>/libraries/games" class="libraryLink">Video Games</a>
+                </li>
+
+                <li>
+                    <a href="/users/<%=user._id%>/libraries/books" class="libraryLink">Books</a>
+                </li>
+
+                <li>
+                    <a href="/users/<%=user._id%>/libraries/cds" class="libraryLink">CDs</a>
+                </li>
+
+            </ul>
         </div>
         <div>
-            <p>Would you like to <a href="/users/<%=user._id%>/libraries/new">add to your Library?</a></p>
+            <p>Would you like to <a href="/users/<%=user._id%>/libraries/new" class="addNewLink">add to your Library?</a></p>
         </div>
 
 </body>

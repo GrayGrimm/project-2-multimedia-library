@@ -13,15 +13,20 @@
         <h1>Your Movies</h1>
         <h2>Welcome to your movies library!</h2>
 
+        <div>
+            <p>Would you like to <a href="/users/<%=user._id%>/libraries/new" class="addNewLink">add to your Library?</a></p>
+        </div>
+
         <ul>
             <% movieLibrary.forEach(movie=> { %>
                 <li>
-                    <a href="/users/<%= user._id%>/libraries/<%= movie._id %>">
+                    <a href="/users/<%= user._id%>/libraries/<%= movie._id %>" class="movieLink">
                         <%= movie.name %>
                     </a>
                 </li>
                 <% }) %>
         </ul>
+
 </body>
 
 </html>

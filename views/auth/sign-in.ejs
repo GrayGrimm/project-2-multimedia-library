@@ -9,14 +9,15 @@
 </head>
 
 <body>
+  <%- include('../partials/_navbar.ejs') %>
   <h1>Sign in</h1>
   <form action="/auth/sign-in" method="POST">
     <label for="username">Username:</label>
     <input type="text" name="username" id="username" />
     <label for="password">Password:</label>
     <input type="password" name="password" id="password" />
-    <button type="submit">Sign in</button>
-    <a href="/auth/sign-up" class="signUpButton">Sign Up</a>
+    <button type="submit" class="signInButton">Sign in</button>
+    <a href="/auth/sign-up" id="signUpLink">Sign Up</a>
   </form>
 </body>
 
