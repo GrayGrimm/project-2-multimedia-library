@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/global.css">
     <title>Editing <%= currentMovie.name %>
     </title>
 </head>
@@ -21,24 +22,18 @@
 
             <label for="rating">Rating:</label>
             <select name="rating" id="rating">
-                <option value="G"
-                <%=currentMovie.rating==='G' ? 'selected' : '' %>
-                >G</option>
-                <option value="PG"
-                <%=currentMovie.rating==='PG' ? 'selected' : '' %>
-                >PG</option>
-                <option value="PG-13"
-                <%=currentMovie.rating==='PG-13' ? 'selected' : '' %>
-                >PG-13</option>
-                <option value="R"
-                <%=currentMovie.rating==='R' ? 'selected' : '' %>
-                >R</option>
-                <option value="NC-17"
-                <%=currentMovie.rating==='NC-17' ? 'selected' : '' %>
-                >NC-17</option>
-                <option value="NR"
-                <%=currentMovie.rating==='NR' ? 'selected' : '' %>
-                >NR</option>
+                <option value="G" <%=currentMovie.rating==='G' ? 'selected' : '' %>
+                    >G</option>
+                <option value="PG" <%=currentMovie.rating==='PG' ? 'selected' : '' %>
+                    >PG</option>
+                <option value="PG-13" <%=currentMovie.rating==='PG-13' ? 'selected' : '' %>
+                    >PG-13</option>
+                <option value="R" <%=currentMovie.rating==='R' ? 'selected' : '' %>
+                    >R</option>
+                <option value="NC-17" <%=currentMovie.rating==='NC-17' ? 'selected' : '' %>
+                    >NC-17</option>
+                <option value="NR" <%=currentMovie.rating==='NR' ? 'selected' : '' %>
+                    >NR</option>
             </select>
 
             <label for="genre">Genre:</label>

@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/global.css">
     <title>
         <%= user.username %>
     </title>
@@ -11,10 +12,14 @@
 
 <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1>Your Libraries</h1>
-   <div><p>I would like to view my:</p><a href="/users/<%=user._id%>/libraries/movies">Movies</a></div>
-   <div><p>Would you like to <a href="/users/<%=user._id%>/libraries/new">add to your Library?</a></p></div>
-    
+        <h1>Your Libraries</h1>
+        <div>
+            <p>I would like to view my:</p><a href="/users/<%=user._id%>/libraries/movies">Movies</a>
+        </div>
+        <div>
+            <p>Would you like to <a href="/users/<%=user._id%>/libraries/new">add to your Library?</a></p>
+        </div>
+
 </body>
 
 </html>

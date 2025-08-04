@@ -1,32 +1,48 @@
 body {
     display: grid;
     background-color: lightslategrey;
-    
+    justify-items: center;
 }
 
 nav {
     display: flex;
     gap: 5px;
-    align-items: right;
-    text-align: right;
+    justify-content: left;
+    text-align: left;
+    width: 100%;
+}
+
+.signUpButton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
 }
 
 h1 {
     display: flex;
-    color: rgb(243, 70, 18);
+    color: rgb(0, 0, 0);
     justify-content: center;
     align-items: center;
 
 };
 
-.links {
-    /* display: flex; */
-    color: red;
-    /* justify-content: right; */
-    /* align-items: right; */
+#account-access {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
 }
 
 #sign-up-button, 
 #sign-in-button {
-    font-size: 30px;
+    display: inline-block;
+    font-size: 20px;    
+    color: black;
 }

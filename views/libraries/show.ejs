@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= currentMovie.name %></title>
+    <link rel="stylesheet" href="/stylesheets/global.css">
+    <title>
+        <%= currentMovie.name %>
+    </title>
 </head>
+
 <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1><%= currentMovie.name %></h1>
-   <ul>
-        <% for (const attribute in currentMovie._doc) { %>
-            <% if (currentMovie._doc.hasOwnProperty(attribute) && attribute !== '_id') { %>
-                <li>
-                    <strong><%= attribute %>:</strong> <%= currentMovie._doc[attribute] %>
-                </li>
-            <% } %>
-        <% } %>
-    </ul>
-    <a href="/users/<%= user._id%>/libraries/<%=currentMovie._id%>/edit">Edit</a>
-    <form action="/users/<%= user._id %>/libraries/<%= currentMovie._id %>?_method=DELETE" method="POST">
-    <button type="submit">Delete <%= currentMovie.name %></button>
-    </form>
+        <h1>
+            <%= currentMovie.name %>
+        </h1>
+        <ul>
+            <% for (const attribute in currentMovie._doc) { %>
+                <% if (currentMovie._doc.hasOwnProperty(attribute) && attribute !=='_id' ) { %>
+                    <li>
+                        <strong>
+                            <%= attribute %>:
+                        </strong>
+                        <%= currentMovie._doc[attribute] %>
+                    </li>
+                    <% } %>
+                        <% } %>
+        </ul>
+        <a href="/users/<%= user._id%>/libraries/<%=currentMovie._id%>/edit">Edit</a>
+        <form action="/users/<%= user._id %>/libraries/<%= currentMovie._id %>?_method=DELETE" method="POST">
+            <button type="submit">Delete <%= currentMovie.name %></button>
+        </form>
 </body>
+
 </html>
