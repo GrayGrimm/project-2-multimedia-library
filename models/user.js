@@ -31,7 +31,7 @@ const movieSchema = new mongoose.Schema({
     director: {
         type: String,
     },
-    realease_year: {
+    release_year: {
         type: Number,
     },
     runtime_minutes: {
