@@ -13,7 +13,7 @@ Project planning link: https://trello.com/b/d43WOifq/project-2
 
 GitHub repo link: https://github.com/GrayGrimm/project-2-multimedia-library
 
-Attributions:
+## Attributions:
 
 https://gemini.google.com/app
 
@@ -22,18 +22,24 @@ https://developer.mozilla.org/en-US/
 https://moviesanywhere.com/
 
 
-Technologies Used:
+## Technologies Used:
 
-Javascript, HTML, CSS, EJS, Heroku, VS Code, MongoDB
+- Javascript 
+- HTML
+- CSS
+- EJS
+- Heroku
+- VS Code
+- MongoDB
 
-Next Steps:
+## Next Steps:
 
-Add the other library functionalities
-Add library drop down to the right of nav bar
-Add functionality so when all required areas are filled out the add to library button turns green
-Add the community view functionality
-Add the borrow functionality
-Add filter/ search functionality
+- Add the other library functionalities
+- Add library drop down to the right of nav bar
+- Add functionality so when all required areas are filled out the add to - library button turns green
+- Add the community view functionality
+- Add the borrow functionality
+- Add filter/ search functionality
 
 
 
