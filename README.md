@@ -40,6 +40,10 @@ https://moviesanywhere.com/
 - Add the community view functionality
 - Add the borrow functionality
 - Add filter/ search functionality
+- Edit how the forms appear
+- Edit link styles
+- Add buttons to logo
+- Implement partials where can
 
 
 
