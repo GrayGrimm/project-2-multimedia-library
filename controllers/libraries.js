@@ -55,19 +55,19 @@ router.get('/movies', async (req, res) => {
 });
 /* ==================Res.send only for now================== */
 router.get('/tv-shows', async (req, res) => {
-  res.send('This will bring you to your TV Shows in our next update 1.1. Please click the go back button.');
+  res.send('This will bring you to your TV Shows in our next update 1.1. <a href="/">Click here to return to home page.</a></p>');
 });
 
 router.get('/games', async (req, res) => {
-  res.send('This will bring you to your Video Games in update 1.2. Please click the go back button.');
+  res.send('This will bring you to your Video Games in update 1.2. <a href="/">Click here to return to home page.</a>');
 });
 
 router.get('/books', async (req, res) => {
-  res.send('This will bring you to your Books in update 1.3. Please click the go back button.');
+  res.send('This will bring you to your Books in update 1.3. <a href="/">Click here to return to home page.</a>');
 });
 
 router.get('/cds', async (req, res) => {
-  res.send("This will bring you to your CD's in update 1.4. Please click the go back button.");
+  res.send("This will bring you to your CD's in update 1.4. <a href="/">Click here to return to home page.</a>");
 });
 /* ==========================End========================== */
 
