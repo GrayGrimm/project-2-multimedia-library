@@ -1,0 +1,25 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #2f4f4f;
+    text-align: center;
+}
+
+.container {
+    background-color: #778899;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #000000;
+}
+
+p {
+    color: #333;
+}

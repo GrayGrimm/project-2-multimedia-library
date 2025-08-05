@@ -42,7 +42,7 @@ app.use(
 app.use(passUserToView);
 
 app.get("/", async (req, res) => {
-  if(req.session.user) {
+  if (req.session.user) {
     res.redirect(`/users/${req.session.user._id}/libraries`);
   } else {
     res.render('index.ejs');

@@ -11,7 +11,7 @@
 <body>
     <%- include('../partials/_navbar.ejs') %>
         <h1>Add to your Library!</h1>
-<p> You can only add to your Movies Library until update 1.1! Thank you for understanding!</p>
+        <p> You can only add to your Movies Library until update 1.1! Thank you for understanding!</p>
         <form action="/users/<%= user._id %>/libraries/movieLibrary" method="POST">
 
             <label for="name">Name:<span class="required">*</span></label>

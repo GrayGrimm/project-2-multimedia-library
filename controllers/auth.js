@@ -22,52 +22,9 @@ router.post("/sign-up", async (req, res) => {
 
     const hashedPassword = bcrypt.hashSync(req.body.password, 10);
     req.body.password = hashedPassword;
-const successPageHtml = `
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Signup Successful!</title>
-            <meta http-equiv="refresh" content="3;url=/"> 
-            <style>
-                body {
-                    font-family: sans-serif;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    min-height: 100vh;
-                    margin: 0;
-                    background-color: #2f4f4f;
-                    text-align: center;
-                }
-                .container {
-                    background-color: #778899;
-                    padding: 30px;
-                    border-radius: 8px;
-                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                }
-                h1 {
-                    color: #000000;
-                }
-                p {
-                    color: #333;
-                }
-            </style>
-        </head>
-        <body>
-            <div class="container">
-                <h1>🎉 Success!</h1>
-                <p>Your account has been created. You will be redirected to the home page in 3 seconds...</p>
-                <p>If you are not redirected, <a href="/">click here</a>.</p>
 
-                </div>
-        </body>
-        </html>
-    `;
     const user = await User.create(req.body);
-    res.send(successPageHtml);
-
+    res.render("auth/sign-up-popup.ejs");
 });
 
 router.get("/sign-in", (req, res) => {
